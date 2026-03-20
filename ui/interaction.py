@@ -1,9 +1,6 @@
 import getpass
 from ui.screen import cls
-import sys
-import os
-from sprites import get_progress_bar
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from ui.sprites import get_progress_bar
 
 # These three functions below present the game interactive interface.
 # They're complete shit for how simple they are, but they work.

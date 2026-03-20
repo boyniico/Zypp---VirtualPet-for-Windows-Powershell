@@ -1,8 +1,8 @@
 {
-    "game_start": null,
-    "newborn": null,
-    "last_visit": null,
-    "last_food": null,
-    "last_bath": null,
-    "days": 0
+  "game_start": null,
+  "newborn": null,
+  "last_visit": null,
+  "last_food": null,
+  "last_bath": null,
+  "days": 0
 }

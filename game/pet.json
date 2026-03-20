@@ -1,9 +1,9 @@
 {
-    "name": null,
-    "age": 0,
-    "stage": "egg",
-    "health": 100,
-    "no_hungry": 50,
-    "no_dirt": 60,
-    "happiness": 90
+  "name": null,
+  "age": 0,
+  "stage": "egg",
+  "health": 100,
+  "no_hungry": 50,
+  "no_dirt": 60,
+  "happiness": 90
 }
