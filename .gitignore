@@ -23,9 +23,6 @@ Thumbs.db
 *.log
 debug.log
 
-# Data (¡CUIDADO! Si son datos del juego, NO ignores)
-# game/*.json  ← NO HAGAS ESTO (pierdes progreso)
-
 # Builds
 dist/
 build/
