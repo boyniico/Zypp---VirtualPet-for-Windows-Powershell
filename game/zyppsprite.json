@@ -1,0 +1,27 @@
+{
+    "egg": {
+        "normal": "( )",
+        "broken": "(/)"
+    },
+    "newborn": {
+        "normal": "(o_o)",
+        "happy": "(owo)",
+        "hungry": "(!o_o!)",
+        "asleep": "(- -)",
+        "sick": "(!x_x!)"
+    },
+    "juvenile": {
+        "normal": "( o_o )",
+        "happy": "( owo )",
+        "hungry": "(!o_o!)",
+        "asleep": "( - - )",
+        "sick": "(!x_x!)"
+    },
+    "adult": {
+        "normal": "(  O_O  )",
+        "happy": "(  OwO  )",
+        "hungry": "( !O_O! )",
+        "asleep": "(  - -  )",
+        "sick": "( !x_x! )"
+    }
+}

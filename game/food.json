@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Zypp Cookies",
+        "hunger_reduce": 20,
+        "price": 0,
+        "description": "Basic survival food"
+    },
+    {
+        "name": "Fresh Fish",
+        "hunger_reduce": 35,
+        "price": 2,
+        "description": "Loves the smell!"
+    },
+    {
+        "name": "Electric Pizza",
+        "hunger_reduce": 50,
+        "price": 5,
+        "description": "+10 happiness bonus"
+    },
+    {
+        "name": "Zypp Cake",
+        "hunger_reduce": 70,
+        "price": 12,
+        "description": "Party in tummy!"
+    },
+    {
+        "name": "Cosmic Energy",
+        "hunger_reduce": 100,
+        "price": 25,
+        "description": "100% fill +10 exp"
+    }
+]

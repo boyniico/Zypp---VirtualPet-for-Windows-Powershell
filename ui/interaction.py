@@ -1,0 +1,91 @@
+import getpass
+from ui.screen import cls
+import sys
+import os
+from sprites import get_progress_bar
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# These three functions below present the game interactive interface.
+# They're complete shit for how simple they are, but they work.
+
+def press_enter(prompt: str = "[Press Enter]",
+                cls_before: bool = False) -> None:
+    if cls_before:
+        cls()
+    getpass.getpass(prompt)
+    cls()
+    return None
+
+def insert_answer(title: str = "", question: str = "",
+        cls_after: bool = False) -> str:
+    if title:
+        width = len(max([title]+[question], key=len))+2
+        sep = "-"*width
+        print(sep)
+        print(title.center(width))
+        print(sep)
+    if question:
+        print(question)
+    answer = input("[> ")
+    if cls_after:
+        cls()
+    return answer
+
+def show_menu(
+        options: list,
+        title: str = "",
+        optionzero: str = "",
+        cls_after: bool = False
+) -> str:
+    # you have NO IDEA what writing this took, for real
+    enum_options = []
+    for i, option in enumerate(options,1):
+        enum_options.append(f" {i}. {option} ")
+    if optionzero:
+        enum_options.append(f" 0. {optionzero} ")
+    width = len(max(enum_options+[title], key=len))
+    if width % 2 != 0:
+        width += 3
+    else:
+        width += 2
+    sep = "-"*width
+    if title:
+        print(sep)
+        print(title.center(width))
+    print(sep)
+    for i in enum_options:
+        print(i)
+    print(sep)
+    return insert_answer(cls_after=cls_after)
+
+# This is where you feel like a mother watching your kid's needs
+# Stupid Zypp, wish it could buy and eat its own Electric Pizza
+def show_zypp_menu(zypp: dict, player: dict, 
+                    zypp_sprite: str, ui_sprites: dict) -> str:
+    
+    # Real Attributes of the Zypp
+    stage = zypp.get("stage")
+    age = zypp.get("age")
+    health = zypp.get("health")
+    hungry = zypp.get("no_hungry")
+    dirt = zypp.get("no_dirt")
+    happy = zypp.get("happiness")
+
+    print(("="*34)+"\n")
+    print(zypp_sprite.center(34))
+    print()
+    print(f"Stage of your Zypp: {stage}")
+    print(f"Health: {health}/100")
+    print(get_progress_bar(health))
+    print()
+    print(f"Hungry: {hungry}/100")
+    print(get_progress_bar(hungry))
+    print()
+    print(f"Dirt: {dirt}/100")
+    print(get_progress_bar(dirt))
+    print()
+    print(f"Happiness: {happy}/100")
+    print(get_progress_bar(happy))
+    print("="*34)
+
+# I need three cups of coffee now
