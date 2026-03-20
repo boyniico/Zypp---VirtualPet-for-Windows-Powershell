@@ -60,8 +60,7 @@ def show_menu(
 
 # This is where you feel like a mother watching your kid's needs
 # Stupid Zypp, wish it could buy and eat its own Electric Pizza
-def show_zypp_menu(zypp: dict, player: dict, 
-                    zypp_sprite: str, ui_sprites: dict) -> str:
+def show_zypp_menu(zypp: dict, zypp_sprite: str) -> str:
     
     # Real Attributes of the Zypp
     stage = zypp.get("stage")
@@ -73,7 +72,7 @@ def show_zypp_menu(zypp: dict, player: dict,
 
     print(("="*34)+"\n")
     print(zypp_sprite.center(34))
-    print()
+    print(f"Age: {age}")
     print(f"Stage of your Zypp: {stage}")
     print(f"Health: {health}/100")
     print(get_progress_bar(health))
@@ -87,5 +86,8 @@ def show_zypp_menu(zypp: dict, player: dict,
     print(f"Happiness: {happy}/100")
     print(get_progress_bar(happy))
     print("="*34)
+    print("1. BATH TIME")
+    print("2. FOOD TIME")
+    print("3. SHOPPING")
 
 # I need three cups of coffee now
