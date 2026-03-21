@@ -57,9 +57,10 @@ def show_menu(
 
 # This is where you feel like a mother watching your kid's needs
 # Stupid Zypp, wish it could buy and eat its own Electric Pizza
-def show_zypp_menu(zypp: dict, zypp_sprite: str) -> str:
+def show_zypp_menu(zypp: dict, zypp_sprite: str, days: int) -> str:
     
     # Real Attributes of the Zypp
+    name = zypp.get("name")
     stage = zypp.get("stage")
     age = zypp.get("age")
     health = zypp.get("health")
@@ -67,24 +68,31 @@ def show_zypp_menu(zypp: dict, zypp_sprite: str) -> str:
     dirt = zypp.get("no_dirt")
     happy = zypp.get("happiness")
 
-    print(("="*34)+"\n")
-    print(zypp_sprite.center(34))
-    print(f"Age: {age}")
-    print(f"Stage of your Zypp: {stage}")
-    print(f"Health: {health}/100")
-    print(get_progress_bar(health))
+    if not name:
+        zname = "your Zypp"
+
+    WIDTH = 5*9
+    sep = "*"*WIDTH
+    print(sep)
+    print(f"Here is {zname}".center(WIDTH))
     print()
-    print(f"Hungry: {hungry}/100")
-    print(get_progress_bar(hungry))
+    print(zypp_sprite.center(WIDTH))
     print()
-    print(f"Dirt: {dirt}/100")
-    print(get_progress_bar(dirt))
-    print()
-    print(f"Happiness: {happy}/100")
-    print(get_progress_bar(happy))
-    print("="*34)
-    print("1. BATH TIME")
-    print("2. FOOD TIME")
-    print("3. SHOPPING")
+    print(f"Age: {age} | Stage of {zname}: {stage}".center(WIDTH))
+    if stage != "egg":
+        print()
+        print(f"Health: {health}/100           Hungry: {hungry}/100")
+        print(f"{get_progress_bar(health)}           {get_progress_bar(hungry)}")
+        print()
+        print(f"Dirt: {dirt}/100              Happiness: {happy}/100")
+        print(f"{get_progress_bar(dirt)}          {get_progress_bar(happy)}")
+        print()
+        print(sep)
+        print("1. BATH TIME")
+        print("2. FOOD TIME")
+        print("3. SHOPPING")
+    if stage == "egg":
+        print(f"Days to hatch: {3 - days}".center(WIDTH))
+    print(sep)
 
 # I need three cups of coffee now
