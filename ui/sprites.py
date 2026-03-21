@@ -32,14 +32,15 @@ def select_sprite() -> str:
             return zyppsprite[stage]["normal"]
         else:
             return zyppsprite[stage]["broken"]
-    
-    if happy == 100:
-        return zyppsprite[stage]["happy"]
-    elif hungry < 50:
-        return zyppsprite[stage]["hungry"]
-    elif (hungry == 0) or (dirt == 0):
+    elif health <= 30:
         return zyppsprite[stage]["sick"]
-    elif (health > 50) and (hungry > 50) and (dirt > 50):
+    if hungry <= 30:
+        return zyppsprite[stage]["hungry"]
+    elif dirt <= 30:
+        return zyppsprite[stage]["dirt"]
+    if happy >= 70:
+        return zyppsprite[stage]["happy"]
+    else:
         return zyppsprite[stage]["normal"]
     
 # WHO THE FUCK IS GONNA PLAY THIS
