@@ -8,20 +8,23 @@
         "happy": "(owo)",
         "hungry": "(!o_o!)",
         "asleep": "(- -)",
-        "sick": "(!x_x!)"
+        "sick": "(!x_x!)",
+        "dirt": "(*o_o*)"
     },
     "juvenile": {
         "normal": "( o_o )",
         "happy": "( owo )",
         "hungry": "(!o_o!)",
         "asleep": "( - - )",
-        "sick": "(!x_x!)"
+        "sick": "(!x_x!)",
+        "dirt": "(*o_o*)"
     },
     "adult": {
         "normal": "(  O_O  )",
         "happy": "(  OwO  )",
         "hungry": "( !O_O! )",
         "asleep": "(  - -  )",
-        "sick": "( !x_x! )"
+        "sick": "( !x_x! )",
+        "dirt": "( *o_o* )"
     }
 }
